@@ -1,40 +1,40 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Image, FlatList } from 'react-native'
 
-export default function Inventory(){
-    const data = [
-        {
-            id: 3,
-            image: 'https://bootdey.com/img/Content/avatar/avatar7.png',
-            name: 'Chicken',
-            text: '200'
-        },
-        {
-            id: 2,
-            image: 'https://bootdey.com/img/Content/avatar/avatar6.png',
-            name: 'John DoeLink',
-            text: '2003'
-        },
-        {
-            id: 4,
-            image: 'https://bootdey.com/img/Content/avatar/avatar2.png',
-            name: 'Finn DoRemiFaso',
-            text: '235'
-        },
-        {
-            id: 5,
-            image: 'https://bootdey.com/img/Content/avatar/avatar3.png',
-            name: 'Maria More More',
-            text: '5435'
-        },
-        {
-            id: 1,
-            image: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-            name: 'Frank Odalthh',
-            text: '3452'
-        },
-    ]
+export const data = [
+    {
+        id: 3,
+        image: 'https://bootdey.com/img/Content/avatar/avatar7.png',
+        name: 'Chicken',
+        price: '20'
+    },
+    {
+        id: 2,
+        image: 'https://bootdey.com/img/Content/avatar/avatar6.png',
+        name: 'John DoeLink',
+        price: '2003'
+    },
+    {
+        id: 4,
+        image: 'https://bootdey.com/img/Content/avatar/avatar2.png',
+        name: 'Finn DoRemiFaso',
+        price: '23'
+    },
+    {
+        id: 5,
+        image: 'https://bootdey.com/img/Content/avatar/avatar3.png',
+        name: 'Maria More More',
+        price: '54'
+    },
+    {
+        id: 1,
+        image: 'https://bootdey.com/img/Content/avatar/avatar1.png',
+        name: 'Frank Odalthh',
+        price: '34'
+    }
+]
 
+export default function Inventory(){
     //TODO get from fiorebase
     const [inventory, setInventory] = useState(data)
 
