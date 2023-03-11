@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {Linking, Text, View} from "react-native";
+import {Button, Linking, Text, View} from "react-native";
 
-function Deeplink(props) {
+function Deeplink({amount}) {
     var myHeaders = new Headers();
     myHeaders.append("x-api-key", "KzI3NzY4NzYzOTM3LjU5NTE3NzAxLWQ5MjYtNDczZS05YzkxLWZjYTY2NmU1NmYxMA==");
     myHeaders.append("Content-Type", "application/json");
 
-    const [url, setUrl] = useState("");
+    const [url, setUrl] = useState("google.com");
 
     var raw = JSON.stringify({
-        "amount": 15,
+        "amount": amount,
         "merchantId": 182,
         "paymentReference": "qwerty",
         "currencyCode": "ZAR",
@@ -33,17 +33,20 @@ function Deeplink(props) {
             .then(result => {
                 const deepLink = JSON.parse(result).url;
                 setUrl(deepLink);
+                console.log("Hi"+deepLink);
             })
             .catch(error => console.log('error', error));
     }, []);
 
-
+    const handlePress = () => {
+        Linking.openURL(url);
+    };
 
     return (
         <View>
             <Text style={{color: 'blue'}}
                   onPress={() => Linking.openURL(url)}>
-                {url}
+                Pay With Halo
             </Text>
         </View>
     );
