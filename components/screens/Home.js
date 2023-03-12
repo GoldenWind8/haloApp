@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import {StatusBar, StyleSheet, Text, View,TouchableOpacity} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {COLOURS, Items} from "../database/Database";
-import {ScrollView, TouchableOpacity} from "react-native-gesture-handler";
+import {ScrollView} from "react-native-gesture-handler";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import ProductCard from "../cards/ProductCard";
@@ -23,9 +23,8 @@ function Home({navigation}) {
     const getDataFromDB = () => {
         let productList = [];
         for (let index = 0; index < Items.length; index++) {
-            if (Items[index].category == 'product') {
-                productList.push(Items[index]);
-            }
+
+            productList.push(Items[index]);
         }
 
         setProducts(productList);
@@ -55,12 +54,12 @@ function Home({navigation}) {
                                 Products
                             </Text>
                             <Text style={styles.sectionCount}>
-                                41
+                                6
                             </Text>
                         </View>
                         <View style={styles.productList}>
                             {products.map(data => {
-                                return <ProductCard data={data} key={data.id} />;
+                                return <ProductCard data={data} navigation={navigation} key={data.id} />;
                             })}
                         </View>
                     </View>
@@ -94,14 +93,15 @@ const styles = StyleSheet.create({
     },
     cartIcon: {
         fontSize: 18,
-        color: COLOURS.backgroundMedium,
+        color: COLOURS.green,
         padding: 12,
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: COLOURS.backgroundLight,
+        borderColor: COLOURS.backgroundDark,
     },
     bodyContainer: {
         padding:16,
+        width: "100%",
     },
     sectionHeader: {
         flexDirection: 'row',

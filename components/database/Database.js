@@ -15,7 +15,7 @@ export const Items = [
   {
     id: 1,
     category: 'product',
-    productName: 'MI Super Bass Bluetooth Wireless Headphones',
+    productName: 'Wireless Headphones',
     productPrice: 1799,
     description:
       'Up to 20 hours battery life | Super powerful Bass | 40mm dynamic driver | Pressure less ear muffs | Bluetooth 5.0 | Voice control',
