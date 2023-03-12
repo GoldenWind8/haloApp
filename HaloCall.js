@@ -1,6 +1,5 @@
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {useEffect, useState} from "react";
-import Inventory from "./Inventory";
 import Deeplink from "./Deeplink";
 
 export default function HaloCall() {

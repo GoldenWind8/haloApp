@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Button, Linking, Text, View} from "react-native";
+import {Linking, Text, View} from "react-native";
 
 function Deeplink({amount}) {
     var myHeaders = new Headers();

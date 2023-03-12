@@ -1,41 +1,24 @@
 import {StyleSheet} from 'react-native';
-import Checkout from "./Checkout";
+import {NavigationContainer} from "@react-navigation/native";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import Home from "./components/screens/Home";
+import ProductInfo from "./components/screens/ProductInfo";
+import Cart from "./components/screens/MyCart";
 
-export  const data = [
-  {
-    id: 3,
-    image: 'https://bootdey.com/img/Content/avatar/avatar7.png',
-    name: 'Chicken',
-    price: '20'
-  },
-  {
-    id: 2,
-    image: 'https://bootdey.com/img/Content/avatar/avatar6.png',
-    name: 'John DoeLink',
-    price: '2003'
-  },
-  {
-    id: 4,
-    image: 'https://bootdey.com/img/Content/avatar/avatar2.png',
-    name: 'Finn DoRemiFaso',
-    price: '23'
-  },
-  {
-    id: 5,
-    image: 'https://bootdey.com/img/Content/avatar/avatar3.png',
-    name: 'Maria More More',
-    price: '54'
-  },
-  {
-    id: 1,
-    image: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-    name: 'Frank Odalthh',
-    price: '34'
-  }
-]
+
 export default function App() {
+  const Stack = new createNativeStackNavigator();
   return (
-      <Checkout />
+
+      <NavigationContainer>
+          <Stack.Navigator
+              screenOptions={{headerShown: false,}}
+          >
+              <Stack.Screen name={"Home"} component={Home} />
+              <Stack.Screen name={"Product Info"} component={ProductInfo} />
+              <Stack.Screen name={"Cart"} component={Cart} />
+          </Stack.Navigator>
+      </NavigationContainer>
   );
 }
 
