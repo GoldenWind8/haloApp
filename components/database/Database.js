@@ -32,7 +32,7 @@ export const Items = [
   {
     id: 2,
     category: 'product',
-    productName: 'boAt Rockerz 450 Bluetooth Headphone',
+    productName: 'Headphones 2',
     productPrice: 1499,
     description:
       'boAt Rockerz 450 M is an on-ear wireless headset that has been ergonomically designed to meet the needs of music lovers.',
@@ -48,66 +48,35 @@ export const Items = [
   {
     id: 3,
     category: 'accessory',
-    productName: 'boAt Airdopes 441',
-    productPrice: 1999,
+    productName: 'Bananas',
+    productPrice: 10,
     description:
       'Bluetooth: It has Bluetooth v5.0 with a range of 10m and is compatible with Android & iOS',
     isOff: true,
     offPercentage: 18,
-    productImage: require('../database/images/accessories/boatairpods1.png'),
+    productImage: require('../database/images/accessories/banana.jpg'),
     isAvailable: true,
-    productImageList: [
-      require('../database/images/accessories/boatairpods1.png'),
-      require('../database/images/accessories/boatairpods2.png'),
-      require('../database/images/accessories/boatairpods3.png'),
-    ],
   },
   {
     id: 4,
     category: 'accessory',
-    productName: 'boAt Bassheads 242',
+    productName: 'Avocado',
     productPrice: 399,
     description:
       'Fly into your workouts with precise tones that inspire and energize your system with its HD sound, all the time.',
     isOff: false,
-    productImage: require('../database/images/accessories/boatbassheads1.png'),
+    productImage: require('../database/images/accessories/avo.jpg'),
     isAvailable: true,
-    productImageList: [
-      require('../database/images/accessories/boatbassheads1.png'),
-      require('../database/images/accessories/boatbassheads2.png'),
-      require('../database/images/accessories/boatbassheads3.png'),
-    ],
   },
   {
     id: 5,
     category: 'accessory',
-    productName: 'boAt Rockerz 255 Pro+',
+    productName: 'Pear',
     productPrice: 1499,
     description:
       'The unbeatable boAt signature sound shines through no matter what are you playing courtesy its 10mm drivers.',
     isOff: false,
-    productImage: require('../database/images/accessories/boatrockerz1.png'),
+    productImage: require('../database/images/accessories/pear.jpg'),
     isAvailable: false,
-    productImageList: [
-      require('../database/images/accessories/boatrockerz1.png'),
-      require('../database/images/accessories/boatrockerz2.png'),
-      require('../database/images/accessories/boatrockerz3.png'),
-    ],
-  },
-  {
-    id: 6,
-    category: 'accessory',
-    productName: 'Boult Audio AirBass Propods TWS',
-    productPrice: 1299,
-    description:
-      'One Touch Control & Voice Assistant: With one multifunction button, you can play/pause, previous/next track and answer/hang-up calls.Voice assistant function lets you access siri/Google Assistant',
-    isOff: false,
-    productImage: require('../database/images/accessories/boultairbass1.png'),
-    isAvailable: true,
-    productImageList: [
-      require('../database/images/accessories/boultairbass1.png'),
-      require('../database/images/accessories/boultairbass2.png'),
-      require('../database/images/accessories/boultairbass3.png'),
-    ],
   },
 ];

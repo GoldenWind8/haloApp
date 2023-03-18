@@ -5,7 +5,7 @@ import {
     TouchableOpacity,
     Image
 } from 'react-native';
-import {COLOURS} from "./database/Database";
+import {COLOURS} from "../database/Database";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function CartItem({data}) {
@@ -31,12 +31,8 @@ function CartItem({data}) {
                 </View>
                 <TouchableOpacity
                     /*onPress={/!*() => removeItemFromCart(data.id)*!/}*/
-                    style={styles.deleteButton}
+                    style={styles.editContainer}
                 >
-                    <MaterialCommunityIcons
-                        name="delete-outline"
-                        style={styles.removeButton}
-                    />
 
                     <View style={styles.quantityContainer}>
                         <View style={styles.quantityButton}>
@@ -59,6 +55,11 @@ function CartItem({data}) {
                             />
                         </View>
                     </View>
+
+                    <MaterialCommunityIcons
+                        name="delete-outline"
+                        style={styles.removeButton}
+                    />
                 </TouchableOpacity>
             </View>
         </TouchableOpacity>
@@ -134,12 +135,14 @@ const styles = {
         backgroundColor: COLOURS.backgroundLight,
         padding: 8,
         borderRadius: 100,
+        alignSelf:"flex-end",
     },
-    deleteButton: {
+    editContainer: {
         padding: 0,
         opacity: 0.5,
         flexDirection: 'row',
-        justifyContent: 'flex-end',
+        width: "100%",
+        justifyContent: 'flex-start',
     }
 
 

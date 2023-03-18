@@ -1,6 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
-import {TouchableOpacity} from "react-native-gesture-handler";
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import {COLOURS} from "../database/Database";
 
@@ -43,12 +42,9 @@ function ProductCard({navigation, data}) {
 
 const styles = StyleSheet.create({
     container2: {
-        width: '100%',
+        width: 160,
         maxWidth: '100%',
         marginVertical: 20,
-
-        borderRadius: 10,
-        backgroundColor: COLOURS.backgroundLight,
     },
     productImageContainer: {
         width: '100%',
@@ -60,24 +56,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 8,
     },
-    offPercentageContainer: {
-        position: 'absolute',
-        width: '20%',
-        height: '24%',
-        backgroundColor: COLOURS.green,
-        top: 0,
-        left: 0,
-        borderTopLeftRadius: 10,
-        borderBottomRightRadius: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    offPercentageText: {
-        fontSize: 12,
-        color: COLOURS.white,
-        fontWeight: 'bold',
-        letterSpacing: 1,
-    },
     productImage: {
         width: '80%',
         height: '80%',
@@ -88,6 +66,7 @@ const styles = StyleSheet.create({
         color: COLOURS.black,
         fontWeight: '600',
         marginBottom: 2,
+        flexWrap:'wrap',
     },
     availableContainer: {
         flexDirection: 'row',

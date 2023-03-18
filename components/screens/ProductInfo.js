@@ -66,10 +66,8 @@ const ProductInfo = ({route, navigation}) => {
                         <Entypo name="edit" style={styles.linkIcon} />
                     </View>
                     <Text style={styles.productDescription}>{product.description}</Text>
-                    <View style={{paddingHorizontal: 16}}>
-                        <Text style={styles.productPrice}>R {product.productPrice}.00</Text>
-                    </View>
-                    <Text> Will add logic to edit stock count</Text>
+                    <Text style={styles.productPrice}>R {product.productPrice}.00</Text>
+                    <Text>Stock left: 32</Text>
                 </View>
             </ScrollView>
 

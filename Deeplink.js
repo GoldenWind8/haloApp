@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {Linking, Text, View} from "react-native";
+import {StyleSheet, Linking, Text, TouchableOpacity, View} from "react-native";
+import {COLOURS} from "./components/database/Database";
 
 function Deeplink({amount}) {
     var myHeaders = new Headers();
@@ -43,13 +44,42 @@ function Deeplink({amount}) {
     };
 
     return (
-        <View>
-            <Text style={{color: 'blue'}}
-                  onPress={() => Linking.openURL(url)}>
-                Pay With Halo
-            </Text>
-        </View>
+            <View style={styles.addToCartButton}>
+                <TouchableOpacity
+                    onPress={() => Linking.openURL(url)}
+                    style={styles.addToCartButtonContainer}>
+                    <Text style={styles.addToCartButtonText}>
+                        Pay With Halo
+                    </Text>
+                </TouchableOpacity>
+            </View>
     );
 }
+
+const styles = StyleSheet.create({
+    addToCartButton: {
+        position: 'absolute',
+        bottom: 10,
+        height: '8%',
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    addToCartButtonContainer: {
+        width: '86%',
+        height: '90%',
+        backgroundColor: COLOURS.blue,
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    addToCartButtonText: {
+        fontSize: 12,
+        fontWeight: '500',
+        letterSpacing: 1,
+        color: COLOURS.white,
+        textTransform: 'uppercase',
+    },
+})
 
 export default Deeplink;
