@@ -23,11 +23,6 @@ export const Items = [
     offPercentage: 10,
     productImage: require('../database/images/products/Mi1.png'),
     isAvailable: true,
-    productImageList: [
-      require('../database/images/products/Mi1.png'),
-      require('../database/images/products/Mi2.png'),
-      require('../database/images/products/Mi3.png'),
-    ],
   },
   {
     id: 2,
@@ -39,13 +34,8 @@ export const Items = [
     isOff: false,
     productImage: require('../database/images/products/boat1.png'),
     isAvailable: true,
-    productImageList: [
-      require('../database/images/products/boat1.png'),
-      require('../database/images/products/boat2.png'),
-      require('../database/images/products/boat3.png'),
-    ],
   },
-  {
+  /*{
     id: 3,
     category: 'accessory',
     productName: 'Bananas',
@@ -56,7 +46,7 @@ export const Items = [
     offPercentage: 18,
     productImage: require('../database/images/accessories/banana.jpg'),
     isAvailable: true,
-  },
+  }*//*,
   {
     id: 4,
     category: 'accessory',
@@ -67,7 +57,7 @@ export const Items = [
     isOff: false,
     productImage: require('../database/images/accessories/avo.jpg'),
     isAvailable: true,
-  },
+  }*//*,
   {
     id: 5,
     category: 'accessory',
@@ -78,5 +68,5 @@ export const Items = [
     isOff: false,
     productImage: require('../database/images/accessories/pear.jpg'),
     isAvailable: false,
-  },
+  },*/
 ];

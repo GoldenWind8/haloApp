@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {StatusBar, StyleSheet, Text, View,TouchableOpacity} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {COLOURS, Items} from "../database/Database";
+import {COLOURS, Items} from "../components/database/Database";
 import {ScrollView} from "react-native-gesture-handler";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import ProductCard from "../cards/ProductCard";
+import ProductCard from "../components/cards/ProductCard";
 
 function Home({navigation}) {
     const [products, setProducts] = useState([]);

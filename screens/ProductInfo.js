@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, Dimensions, Image, ScrollView, StatusBar, Text, TouchableOpacity, View} from 'react-native';
-import {COLOURS, Items} from '../database/Database';
+import {COLOURS, Items} from '../components/database/Database';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
